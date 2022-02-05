@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+#app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+  z-index: 99999;
+}
+.modal-area {
+  position: relative;
+  background-color: #fff;
+}
+.modal span.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 5px;
+  padding-right: 8px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 28px;
+  line-height: 1em;
+}
+.modal-content {
+  padding: 28px;
+  height: calc(100% - 56px);
+}
+.modal.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.counter {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 28px;
+  line-height: 36px;
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+}
+form{
+  padding: 18px 26px;
+  border: 1px dotted #000;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 40vw;
+}
+legend{
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 1rem;
+}
+input,select{
+  margin-bottom: 1rem;
+  display: block;
+}
+.dynamic-form{
+  position: relative;
+  padding-bottom: 4rem;
+}
+.dynamic-form button{
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width:calc(100% - 3rem);
+}
+input[type*="color"]{
+  width:100%;
+}
